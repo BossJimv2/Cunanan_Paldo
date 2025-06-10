@@ -1,0 +1,162 @@
+.order-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #000000;
+}
+
+.order-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 155, 69, 0.9), rgba(255, 155, 69, 0.4));
+    z-index: 1;
+}
+
+.order-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(199, 110, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(199, 110, 0, 0.3);
+}
+
+.page-title {
+    color: rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-field {
+    background: rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    margin-bottom: 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.form-field .MuiInputBase-input {
+    color: #000000 !important;
+}
+
+.form-field .MuiInputLabel-root {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.form-field .MuiFilledInput-root {
+    background: transparent !important;
+}
+
+.form-field:hover {
+    background: rgba(199, 110, 0, 0.1) !important;
+}
+
+.form-field.Mui-focused {
+    background: rgba(199, 110, 0, 0.15) !important;
+    border-color: #C76E00 !important;
+}
+
+.action-button {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease !important;
+}
+
+.action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(199, 110, 0, 0.3);
+}
+
+/* Additional styles for order-specific components */
+.order-items-list {
+    background: rgba(2, 1, 1, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.order-total {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    text-align: right;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Fancy Logout Button */
+.fancy-logout-btn {
+  height: 4em;
+  width: 15em;
+  border: none;
+  border-radius: 40px;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 0;
+}
+
+.fancy-logout-btn span {
+  z-index: 1;
+  display: inline-block;
+  background-color: black;
+  height: 3em;
+  width: 11.5em;
+  border-radius: 25px;
+  color: #fff;
+  line-height: 55px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  transition: all 0.5s;
+}
+
+.fancy-logout-btn .container {
+  z-index: -1;
+  width: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50px);
+  transition: all 0.4s;
+}
+
+.fancy-logout-btn .container svg {
+  padding: 0 10px;
+}
+
+.fancy-logout-btn .icon path {
+  fill: #000;
+}
+
+.fancy-logout-btn:hover span {
+  width: 0;
+}
+
+.fancy-logout-btn:hover .container {
+  z-index: 2;
+  width: 100%;
+}

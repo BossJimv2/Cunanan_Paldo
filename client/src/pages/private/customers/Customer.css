@@ -5,8 +5,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(231, 215, 200, 0.9), #A9A9A9);
+    background: linear-gradient(45deg, rgba(20, 167, 212, 0.9), #A9A9A9);
     z-index: 1;
+    
 }
 
 .customer-card {
@@ -20,6 +21,7 @@
     position: relative;
     z-index: 2;
     transition: all 0.3s ease;
+    
 }
 
 .customer-card:hover {
@@ -76,4 +78,107 @@
 .action-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(199, 110, 0, 0.3);
+}
+
+
+.MuiDataGrid-root {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.MuiDataGrid-columnHeaders {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-bottom-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Style for sort icons */
+.MuiDataGrid-sortIcon {
+    color: #ffffff !important;
+}
+
+.MuiDataGrid-menuIcon {
+    color: #ffffff !important;
+}
+
+.MuiDataGrid-cell {
+    color: #ffffff !important;
+    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.MuiDataGrid-row {
+    background-color: #000000 !important;
+}
+
+.MuiDataGrid-row:hover {
+    background-color: #1a1a1a !important;
+}
+
+.MuiDataGrid-footerContainer {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-top-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+
+.MuiTableContainer-root {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    margin-top: 16px !important;
+}
+
+.MuiTable-root {
+    background-color: #000000 !important;
+}
+
+.MuiTableHead-root .MuiTableRow-root {
+    background-color: #1a1a1a !important;
+}
+
+.MuiTableCell-root {
+    color: #ffffff !important;
+    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.MuiTableBody-root .MuiTableRow-root {
+    background-color: #000000 !important;
+}
+
+.MuiTableBody-root .MuiTableRow-root:hover {
+    background-color: #1a1a1a !important;
+}
+
+
+.MuiTableCell-root .MuiListItemButton-root {
+    color: #ffffff !important;
+    border-radius: 4px !important;
+}
+
+.MuiTableCell-root .MuiListItemButton-root:hover {
+    background-color: rgb(226, 211, 211) !important;
+}
+
+/* Custom scrollbar for dark theme */
+.MuiDataGrid-root ::-webkit-scrollbar,
+.MuiTableContainer-root ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.MuiDataGrid-root ::-webkit-scrollbar-track,
+.MuiTableContainer-root ::-webkit-scrollbar-track {
+    background: #FFFFFF;
+}
+
+.MuiDataGrid-root ::-webkit-scrollbar-thumb,
+.MuiTableContainer-root ::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.MuiDataGrid-root ::-webkit-scrollbar-thumb:hover,
+.MuiTableContainer-root ::-webkit-scrollbar-thumb:hover {
+    background: #FFFFFF;
 }

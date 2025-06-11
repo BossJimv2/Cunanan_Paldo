@@ -102,18 +102,16 @@ export default class ProductStore {
         } catch (error: any) {
             this.rootStore.handleError(419, "Something went wrong!", error)
         }
-    }
-
-    // Create
+    }    // Create
     createData = async (postData: any) => {
         try {
             const response = await fetch(this.BASE_URL, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${this.rootStore.authStore.token}`,
-                    'Content-Type': 'application/json', // Ensure JSON header
+                    // Do not set Content-Type for FormData, browser will set it with boundary
                 },
-                body: JSON.stringify(postData) // Ensure payload is stringified
+                body: postData // Send FormData directly
             });
 
             const data = await response.json();

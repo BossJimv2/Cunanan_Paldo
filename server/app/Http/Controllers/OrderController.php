@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class OrderController extends Controller
+
 {
     public function index()
     {
@@ -23,7 +24,7 @@ class OrderController extends Controller
             return $this->handleException($e);
         }
     }
-
+        
     public function store(Request $request)
     {
         try {

@@ -49,7 +49,7 @@ export class RootStore implements IRootStore{
            this.authStore.setIsAuthenticated(false)
            return null;
         };
-        this.alertStore.open({status: "error", message: errorMessage})
+        this.alertStore.open({status: "error", message: errorMessage})     
      }
 
  }

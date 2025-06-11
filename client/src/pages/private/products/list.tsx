@@ -24,7 +24,7 @@ const ProductList = () => {
 
 
     return (
-        <div style={{ height: 500, width: '100%' }}>
+        <div style={{height: 600   , width: '120%' , marginLeft: '-10%'}}>
             <Button variant="contained" sx={{ mb: 2 }} component={Link} to="create">Create</Button>
             <DataGrid
                 rows={productStore.rowData}
@@ -32,11 +32,11 @@ const ProductList = () => {
                 initialState={{
                 pagination: { paginationModel: { page: 0, pageSize: 5} },
                 }}
-                pageSizeOptions={[5, 10, 25]}
+                
             />
     </div>
     );
 }
 
 
-export default observer(ProductList) 
+export default observer(ProductList)

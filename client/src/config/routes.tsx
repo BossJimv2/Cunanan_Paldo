@@ -15,6 +15,7 @@ import Orders from '../pages/private/orders'
 import OrderCreate from '../pages/private/orders/create'
 import OrderList from '../pages/private/orders/list'
 import OrderView from '../pages/private/orders/view'
+import Dashboard from '../pages/private/dashboard'
 
 const routes = [
     { path: "/", element: <Navigate to="login" /> },
@@ -23,7 +24,7 @@ const routes = [
         path: "/dashboard",
         element: <PrivateRoute element={<BaseLayout />} />,
         children: [
-            { path: "", element: <Navigate to="customers" /> },
+            { path: "", element: <Dashboard /> },
             {
                 path: "customers",
                 element: <PrivateRoute element={<Customers />} />,

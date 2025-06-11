@@ -57,7 +57,7 @@ const Login = () => {
               width: '100%',
             }}>
               <img src="logo2.png" alt="Logo" className="login-logo" />
-                <h1 className="login-title" style={{ color: 'black', fontWeight: 300 }}>"Life is short, so buy a new book."</h1>
+                <h1 className="login-title" style={{ color: 'black', fontWeight: 300 }}></h1>
               
               <Controller
                 name="email"

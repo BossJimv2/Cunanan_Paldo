@@ -2,10 +2,10 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;    background: url('book.gif') no-repeat center center fixed;
+    justify-content: center;    background: url('cyan.gif') no-repeat center center fixed;
     background-size: cover;
     position: relative;
-    padding: 20px;
+    padding: 0px;
 }
 
 .login-container::before {
@@ -22,7 +22,7 @@
 
 .login-form {
     width: 100%; 
-    background-color: rgba(85, 36, 4, 0.95); 
+    background-color: #00ffff54; 
     padding: 3.6rem;
     z-index: 2;
     animation: fadeInUp 0.8s ease-out;
@@ -40,7 +40,7 @@
 }
 
 .login-logo {
-    width: 300px;
+    width: 400px;
     height: auto;
     margin: 0 auto 2.5rem;
     display: flex;
@@ -72,8 +72,8 @@
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 1%;
-    box-shadow: 0 8px 32px 0 rgba(199, 110, 0, 0.3);
-    backdrop-filter: blur(50px);
+    box-shadow: 0 8px 32px 0 #00FFFF;
+    backdrop-filter: blur(1000px);
     margin-top: 2rem;
     border-radius: 500px;
 }
@@ -86,15 +86,15 @@
 }
 
 .login-input .MuiOutlinedInput-root {
-    background-color: rgba(85, 36, 4, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
     border-radius: 10px;
-    border: 1px solid rgba(199, 110, 0, 0.3);
+    border: 1px solid rgba(121, 118, 115, 0.3);
 }
 
-.login-input .MuiOutlinedInput-root .MuiOutlinedInput-input {
-    color: white;
+.login-input .MuiOutlinedInput-root .MuiOutlinedInput-input {   
+    color: rgb(139, 11, 11);
 }
 
 .login-input .MuiOutlinedInput-root .MuiInputLabel-root {
@@ -109,11 +109,11 @@
 .login-input .MuiOutlinedInput-root.Mui-focused {
     background-color: rgba(85, 36, 4, 0.8);
     border-color: #C76E00;
-    box-shadow: 0 0 0 2px rgba(241, 236, 229, 0.2);
+    box-shadow: 0 0 0 2px rgba(241, 236, 229, 0.2); 
 }
 
 .login-input .MuiInputLabel-root {
-    color: #e3dceb;
+    color: #000000;
 }
 
 .login-input .MuiOutlinedInput-notchedOutline {
@@ -151,7 +151,7 @@
 }
 
 .icon {
-  background-color: #552404;
+  background-color: #000000;
   padding: 9px 10px 5px 10px;
 }
 
@@ -169,7 +169,7 @@
 }
 
 .button-icon:hover {
-  border-color: #552404;
+  border-color: #032220;
 }
 
 .button-icon:hover .cube {
@@ -190,13 +190,13 @@
 }
 
 .top {
-  background: #fa6909;
-  color: #000000;
+  background: #000000;
+  color: #fff9f9;
   transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
 }
 
 .front {
-  background: #552404;
+  background: #5f5c5a;
   color: #fff;
   transform: translate3d(0, 0, 1em);
 }

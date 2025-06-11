@@ -24,17 +24,21 @@ const CustomerList = () => {
 
 
     return (
-        <div style={{ height: 500, width: '100%' }}>
+        <div style={{ height: 600, width: '120%', marginLeft: '-10%' }}>
             <Button variant="contained" sx={{ mb: 2 }} component={Link} to="create">Create</Button>
             <DataGrid
-                rows={customerStore.rowData}
-                columns={customerStore.columns}
-                initialState={{
-                pagination: { paginationModel: { page: 0, pageSize: 5} },
-                }}
-                pageSizeOptions={[5, 10, 25]}
+            rows={customerStore.rowData}
+            columns={customerStore.columns}
+            initialState={{
+                pagination: { paginationModel: { page: 0, pageSize: 5 } },
+            }}
+            sx={{
+                '& .MuiDataGrid-cell, & .MuiDataGrid-columnHeader': {
+                fontSize: '1.2rem',
+                },
+            }}
             />
-    </div>
+        </div>
     );
 }
 

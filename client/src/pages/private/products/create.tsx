@@ -12,19 +12,18 @@ import { useStore } from '../../../store/rootStore';
 const validationSchema = Yup.object().shape({
   name: Yup.string().required('Product name is required'),
   category_id: Yup.string().required('Category is required'),
-  price: Yup.number().required('Price is required').min(0, 'Minimum price is 0'),
-  stock: Yup.number().required('Email is required').min(0, 'Minimum stock is 0'),
-  image: Yup.mixed().test('required', 'Image is required', (value:any) => {
-    if (!value) return false; // No file is still valid
-    return true
-  }).test('fileType', 'Unsupported file format', (value:any) => {
-    if (!value) return true; // No file is still valid
-    const supportedFormats = ['image/jpeg', 'image/png', 'image/jpg'];
-    return supportedFormats.includes(value.type);
-  }).test('fileSize', 'File size is too large (max: 5000KB)', (value:any) => {
-    if (!value) return true; // No file is still valid
-    return value.size <= 5000000; // 5000KB in bytes
-  }), 
+  price: Yup.number().typeError('Price must be a number').required('Price is required').min(0, 'Minimum price is 0'),
+  stock: Yup.number().typeError('Stock must be a number').required('Stock is required').min(0, 'Minimum stock is 0'),  image: Yup.mixed()
+    .required('Image is required')
+    .test('fileType', 'Unsupported file format (allowed: jpg, jpeg, png)', (value: any) => {
+      if (!value) return false;
+      const supportedFormats = ['image/jpeg', 'image/png', 'image/jpg'];
+      return supportedFormats.includes(value.type);
+    })
+    .test('fileSize', 'File size is too large (max: 5000KB)', (value:any) => {
+      if (!value) return false;
+      return value.size <= 5000000; // 5000KB in bytes
+    }),
 })
 
 
@@ -176,7 +175,7 @@ const ProductCreate = () => {
               fullWidth
               id="image"
               type='file'
-              label="Zip code"
+              label="Product Image"
               variant="filled"
               focused
               onChange={(e: any) => {
